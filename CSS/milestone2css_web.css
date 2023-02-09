@@ -118,3 +118,9 @@ ul.navbar>li a:hover {
 .tabletype_2 tr:hover {
     background-color:coral;
 }
+
+@media print {
+    .screen_only {
+        display: none;
+    }
+}
