@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title> Profile: Avery Lagredelle </title>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="Resources/favicon.ico">
         <link rel="stylesheet" href="CSS/milestone2css_web.css" media="(min-width: 750px)">
         <link rel="stylesheet" href="CSS/milestone2css_mobile.css" media="(max-width: 749px)">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <style>
             span {
                 font-style: italic;
@@ -13,116 +18,151 @@
         </style>
     </head>
 
-    <body>
-       
-        <div id="menu">
-            
-            <nav>
-                <ul class="navbar">
-                    <li><h2> Menu </h2></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#basic_profile_info">Basic Profile Information</a></li>
-                    <li><a href="#education_summary">Education Summary</a></li>
-                    <li><a href="#work_experience_internships">Work Experience/Internships</a></li>
-                    <li><a href="#programming_skills">Programming Skills</a></li>
-                    <li><a href="#general_interests">General Interests</a></li>
-                    <li><a href="#favorite_song_movie_tvshow">Favorite Song, Movie, and TV Show</a></li>
-                    <li><a href="#favorite_websites">Favorite Websites</a></li>
-                    <li><a href="#my_projects">My Projects in This Course</a></li>
+    <body class="main_page">
+        <nav class="navbar navbar-expand-xl bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="index.html">My Profile</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#basic_profile_info">Basic Profile Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education_summary">Education Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work_experience_internships">Work Experience/Internships</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#general_interests">General Interests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programming_skills">Programming Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#favorite_song_movie_tvshow">Favorite Song, Movie, and TV Show</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#favorite_websites">Favorite Websites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#my_projects">My Projects in This Course</a>
+                    </li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
-       <div id="content">
-        <h1 id="page_heading"> Welcome To My Profile! </h1>
-        <img src="Resources/ProfessionalPhoto1.jpg"/>
-        <div id="basic_profile_info">
-            <h2> Basic Profile Information </h2>
-            <p>
-                Hello! My name is Avery Lagredelle, and this is my profile. I'm a sophomore at St. John's majoring in computer science.
-                I'm also pursuing a French minor. I'll be graduating in May 2025, and I'm looking forward to everything I'll learn in this 
-                web design class.
-            </p>
-        </div>
-        
-        <hr>
+       <div style="margin-top: 100px;">
 
-        <div id="education_summary">
-            <h2> Education Summary </h2>
-            <p>
-                I am currently in my second year of college at St. John's University. I graduated from Queens High School of Teaching in 2021.
-            </p>
-            <h3> Degrees and Diplomas </h3>
-            <ul>
-                <li>High school diploma (2021)</li>
-                <li>BS Computer Science (Expected 2025)</li>
-            </ul>
+        <div class="jumbotron text-center">
+            <div class="container">
+                <h1 id="page_heading"> Welcome To My Profile! </h1>
+                <p>
+                    This is my profile. It is the first project I worked
+                    on in this class, and features all sorts of interesting
+                    pieces of information about me. I hope you enjoy it!
+                </p>
+            </div>
         </div>
         
-        <hr>
-
-        <div id="work_experience_internships">
-            <h2> Work Experience/Internships </h2>
-            <ul>
-                <li>Custodial Assistant at <span id="jspoa_color">Jamaica Service Program for Older Adults</span></li>
-                <li>Cashier at <span id="bjs_color">BJ's</span>, Green Acres Mall</li>
-            </ul>
+        <div class="container">
+            <div class="row block">
+                <div id="basic_profile_info" class="col-sm-4 card text-center" style="width: 400px;">
+                    <img class="card-img-top" src="Resources/ProfessionalPhoto1.jpg"/>
+                    <div class="card-body">
+                        <h4> Basic Profile Information </h4>
+                        <p>
+                            Hello! My name is Avery Lagredelle, and this is my profile. I'm a sophomore at St. John's majoring in computer science.
+                            I'm also pursuing a French minor. I'll be graduating in May 2025, and I'm looking forward to everything I'll learn in this 
+                            web design class.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div id="education_summary" class="">
+                        <h2> Education Summary </h2>
+                        <p>
+                            I am currently in my second year of college at St. John's University. I graduated from Queens High School of Teaching in 2021.
+                        </p>
+                        <h5> Degrees and Diplomas </h5>
+                        <ul>
+                            <li>High school diploma (2021)</li>
+                            <li>BS Computer Science (Expected 2025)</li>
+                        </ul>
+                    </div>
+                    <div id="work_experience_internships" class="">
+                        <h2> Work Experience/Internships </h2>
+                        <ul>
+                            <li>Custodial Assistant at <span id="jspoa_color">Jamaica Service Program for Older Adults</span></li>
+                            <li>Cashier at <span id="bjs_color">BJ's</span>, Green Acres Mall</li>
+                        </ul>
+                    </div>
+                    <div id="general_interests" class="">
+                        <h2> General Interests </h2>
+                        <p>
+                            I spend most of my time watching YouTube videos or Netflix, playing video games, or napping to be quite honest. 
+                            I do have a lot of hobbies I enjoy though, like crocheting, playing piano, bike riding, and playing tennis. I also 
+                            would like to get more into art and video game design, as well as voice acting and animation.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="row block" style="margin-top: 20px;">
+                    <div id="programming_skills" class="col-sm-12">
+                        <h2> Programming Skills </h2>
+                        <p>
+                            I've been interested in programming since high school, but I only started learning to program when I came to college, giving me 
+                            only about 2 years of experience so far. At present, these are the languages I'm familar with:
+                        </p>
+                        <ul>
+                            <li>Java (Beginner)</li>
+                            <li>C# (Beginner)</li>
+                            <li>HTML(beginner)</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12" id="favorite_song_movie_tvshow">
+                        <h2> Favorite Song, Movie, and TV Show </h2>
+                    </div>
+                </div>
+                <div class="row block">
+                    <div class="col-sm-4">
+                        <p>
+                            The video below showcases one of my favorite songs: "Cure for Me" by AURORA.
+                        </p>
+                        <iframe src="https://www.youtube.com/embed/N2fBVE_zeME" title="AURORA - Cure For Me (Lyrics)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>
+                            This video is a clip from one of my favorite movies, <i>A Few Good Men</i> directed by Rob Reiner.
+                        </p>
+                        <iframe src="https://www.youtube.com/embed/kYPD6TtFJqU" title=""Do You Have Any Other Questions?" Courtroom Scene | A Few Good Men" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>
+                            This video is a clip from one of my favorite cartoon shows since I was a kid, <i>The Amazing World of Gumball</i>, 
+                            created by Ben Bocquelet.
+                        </p>
+                        <iframe src="https://www.youtube.com/embed/yvTRUaDpdzU" title="Gumball | Playing Cupid | The Shippening | Cartoon Network" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <hr>
 
-        <div id="programming_skills">
-            <h2> Programming Skills </h2>
-            <p>
-                I've been interested in programming since high school, but I only started learning to program when I came to college, giving me 
-                only about 2 years of experience so far. At present, these are the languages I'm familar with:
-            </p>
-            <ul>
-                <li>Java (Beginner)</li>
-                <li>C# (Beginner)</li>
-                <li>HTML(beginner)</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div id="general_interests">
-            <h2> General Interests </h2>
-            <p>
-                I spend most of my time watching YouTube videos or Netflix, playing video games, or napping to be quite honest. 
-                I do have a lot of hobbies I enjoy though, like crocheting, playing piano, bike riding, and playing tennis. I also 
-                would like to get more into art and video game design, as well as voice acting and animation.
-            </p>
-        </div>
-
-        <hr>
-
-        <div id="favorite_song_movie_tvshow">
-            <h2> Favorite Song, Movie, and TV Show </h2>
-            <p>
-                The video below showcases one of my favorite songs: "Cure for Me" by AURORA.
-            </p>
-            <iframe src="https://www.youtube.com/embed/N2fBVE_zeME" title="AURORA - Cure For Me (Lyrics)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p>
-                This video is a clip from one of my favorite movies, <i>A Few Good Men</i> directed by Rob Reiner.
-            </p>
-            <iframe src="https://www.youtube.com/embed/kYPD6TtFJqU" title=""Do You Have Any Other Questions?" Courtroom Scene | A Few Good Men" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p>
-                This video is a clip from one of my favorite cartoon shows since I was a kid, <i>The Amazing World of Gumball</i>, 
-                created by Ben Bocquelet.
-            </p>
-            <iframe src="https://www.youtube.com/embed/yvTRUaDpdzU" title="Gumball | Playing Cupid | The Shippening | Cartoon Network" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-
-        <hr>
-
-        <div id="favorite_websites">
+        <div id="favorite_websites" class="container block">
             <h2> Favorite Websites </h2>
             <p>
                 Below is a list of websites I like to visit often. Mostly they are for entertainment, but a couple of them have 
                 educational value as well.
             </p>
-            <table class="tabletype_2">
+            <table class="table table-striped table-bordered table-hover table-sm">
                 <tr>
                     <th>Website</th>
                     <th>Explanation</th>
@@ -169,10 +209,8 @@
                 </tr>
             </table>
         </div>
-        
-        <hr>
 
-        <div id="my_projects">
+        <div id="my_projects" class="container block">
             <h2> My Projects in This Course </h2>
             <p>
                 This is a list of the projects I have completed in this course.
@@ -195,24 +233,31 @@
             </table>
         </div>
 
-        <div>
-            <h3><strong>You can pick an option below.</strong></h3>
+        <div class="container block">
+            <h3><strong>Rate how much you'd score this website out of 5 below. 5 is high quality, 1 is poor quality.</strong></h3>
+            <br>
             <form>
-                <div>
-                    <label for="options">Choose an option</label>
-                    <input name="options" type="radio" value="option_1"> Option 1
-                    <input name="options" type="radio" value="option_2"> Option 2
+                <div class="form-group">
+                    <label for="options"><h5>Choose an option</h5></label>
+                    <input name="options" type="radio" value="option_1"> 1
+                    <input name="options" type="radio" value="option_2"> 2
+                    <input name="options" type="radio" value="option_3"> 3
+                    <input name="options" type="radio" value="option_4"> 4
+                    <input name="options" type="radio" value="option_5"> 5
                 </div>
-                <div>
-                    <input type="submit" value="Submit">
-                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
 
-        <div>
-            <h2>Thank You for Reading!</h2>
+        <div class="container block">
+            <h2 class="text-center">Thank You for Reading!</h2>
             <img style="float: none;" class="center screen_only" src="https://media.tenor.com/RQKAyM7ZHA0AAAAM/banana-dance.gif" width="100px" height="100px">
         </div>
-       </div>
+
+        <div id="page_end_alert" class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+            You've reached the end of this page. You can click the "X" to close this alert.
+        </div>
+        
     </body>
 </html>
