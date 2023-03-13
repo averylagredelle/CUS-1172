@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // This is how we register a callback function to the onsubmit event
+                // of the form element.
+
+                document.querySelector("#form").onsubmit = function() {
+                    // The callback function accesses the value of the input
+                    // field with id message.
+                    alert(document.querySelector("#message").value);
+                }
+
+                //This is how we register acallback function to the onclick event.
+                document.querySelector("#abutton").onclick = function() {
+                    let message = document.querySelector("#message").value;
+                    alert(`${message} 😃`);
+                }
+            })
+        </script>
+        <title>Responding to Form Events Using Javascript</title>
+    </head>
+    <body>
+        <form id="form">
+            <input id="message" type="text"/>
+            <button id="abutton">Click here!</button>
+            <input type="submit">
+        </form>
+    </body>
+</html>

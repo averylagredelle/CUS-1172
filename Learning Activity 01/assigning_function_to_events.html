@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            //
+            // This is how we register a callback function in response to
+            // the event 'DOMContentLoaded'. The second argument of the addEventListener method
+            // is an anonymous function.
+            //
+
+            document.addEventListener("DOMContentLoaded", function(){
+                // Here the 'inc' function is assigned to the onclick event
+                // of the button HTML element. Note the lack of parentheses.
+                // It won't work if you add them, as that will just call inc()
+                // as soon as it is parsed.
+                document.querySelector("button").onclick = inc;
+            })
+
+            let counter = 0;
+            function inc() {
+                // Update the variable by one.
+                counter = counter + 1;
+                console.log(`counter increased to ${counter}`);
+                // Here we use the querySelector with the id of the component.
+                // We also use string literal syntax with ${counter}.
+                document.querySelector("#score").innerHTML = `Score: ${counter}`;
+
+                //This is the syntax of an if statement in javascript.
+                if(counter >= 10) {
+                    counter = 0;
+                    document.querySelector("#score").innerHTML = "You Win!";
+                }
+            }
+        </script>
+        <title>Assigning Function to Events Programmatically</title>
+    </head>
+    <body>
+        <h1 id="score">Score: 0</h1>
+        <button>Click to score a point!</button>
+    </body>
+</html>
