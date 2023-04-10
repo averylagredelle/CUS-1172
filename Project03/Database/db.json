@@ -1,0 +1,42 @@
+{
+    "java_questions": [
+        {
+            "questionType": "true_false",
+            "questionText": "Java is an object-oriented programming language.",
+            "correctAnswer": "true",
+            "options": ["true", "false"]
+        },
+        {
+            "questionType": "multiple_choice",
+            "questionText": "Which statement would you use to print the string \"Hello\" in Java?",
+            "correctAnswer": "System.out.println(\"Hello\")",
+            "options":["console.log(\"Hello\")", "Console.WriteLine(\"Hello\")", "System.out.println(\"Hello\")", "print('Hello')"] 
+        },
+        {
+            "questionType": "text_input_one",
+            "questionText": "What Java statement do you need to find the square root of 10.89?",
+            "correctAnswer": "Math.sqrt(10.89)",
+            "answerFieldId": "answer_to_question"
+        }, 
+        {
+            "questionType": "text_input_multiple",
+            "questionText": "There are three types of loops you can use in Java. One is the do-while loop. What are the names of the other two kinds of loops?",
+            "correctAnswer": ["for", "while"],
+            "answerFieldOneId": "first_answer",
+            "answerFieldTwoId": "second_answer"
+        },
+        {
+            "questionType": "image_selection",
+            "questionText": "Which code block will print \"aaa\"?",
+            "correctAnswer": "img_1",
+            "options": [
+                {
+                    "id": "img_1",
+                    "source": ""
+                }
+            ]
+        }
+    ],
+
+    "javascript_questions": []
+}

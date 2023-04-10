@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Application</title>
 
+        <!--Bootstrap Libraries-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+        <!--Handlebars Library-->
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+        <!--Quiz App Script-->
+        <script src="quiz_app.js"></script>
+        <link rel="stylesheet" href="quiz_app.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-info"></nav>
+
+        <div id="widget_view" style="margin:50px"></div>
+    </body>
+
+    <!--Views-->
+    <script id="intro_view" type="text/x-handlebars-template"></script>
+
+    <script id="question_view_true_false" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <span style="text-align: center;">{{this.questionText}}</span>
+                        <button class="btn btn-primary pull-left" data-action="answer" data-answer="{{this.options.[0]}}">{{this.options.[0]}}</button>
+                        <button class="btn btn-primary float-right" data-action="answer" data-answer="{{this.options.[1]}}">{{this.options.[1]}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="question_view_multiple_choice" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <form>
+                            <div>
+                                <label for="{{this.questionType}}">{{this.questionText}}</label>
+                                <input name="{{this.questionType}}" type="radio" value="{this.options.[0]}"> {{this.options.[0]}}
+                                <input name="{{this.questionType}}" type="radio" value="{this.options.[1]}"> {{this.options.[1]}}
+                                <input name="{{this.questionType}}" type="radio" value="{this.options.[2]}"> {{this.options.[2]}}
+                                <input name="{{this.questionType}}" type="radio" value="{this.options.[3]}"> {{this.options.[3]}}
+                            </div>
+                            <button type="submit" data-action="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="question_view_text_input_one" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <span style="text-align: center;">{{this.questionText}}</span>
+                        <input type="text" id="{{this.answerFieldId}}"><br>
+                        <button class="btn btn-primary" data-action="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="question_view_text_input_multiple" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <span style="text-align: center;">{{this.questionText}}</span>
+                        <form class="form-inline">
+                            <label for="{{this.answerFieldOneId}}">(1)</label>
+                            <input type="text" class="form-control" id="{{this.answerFieldOneId}}">
+                            <label for="{{this.answerFieldTwoId}}">(2)</label>
+                            <input type="text" class="form-control" id="{{this.answerFieldTwoId}}">
+                            <button class="btn btn-primary" data-action="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="question_view_image_selection" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="feedback_view" type="text/x-handlebars-template"></script>
+
+    <script id="end_view" type="text/x-handlebars-template"></script>
+</html>
