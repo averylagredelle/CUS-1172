@@ -74,8 +74,8 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        <span style="text-align: center;">{{this.questionText}}</span>
-                        <input type="text" id="{{this.answerFieldId}}"><br>
+                        <span style="text-align: center;">{{this.questionText}}</span><br><br>
+                        <input type="text" id="{{this.answerFieldId}}"><br><br>
                         <button class="btn btn-primary" data-action="submit">Submit</button>
                     </div>
                 </div>
@@ -88,14 +88,14 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        <span style="text-align: center;">{{this.questionText}}</span>
+                        <span style="text-align: center;">{{this.questionText}}</span><br><br>
                         <form class="form-inline">
-                            <label for="{{this.answerFieldOneId}}">(1)</label>
-                            <input type="text" class="form-control" id="{{this.answerFieldOneId}}">
-                            <label for="{{this.answerFieldTwoId}}">(2)</label>
-                            <input type="text" class="form-control" id="{{this.answerFieldTwoId}}">
-                            <button class="btn btn-primary" data-action="submit">Submit</button>
-                        </form>
+                            <label class="mr-sm-1" for="{{this.answerFieldOneId}}">(1)</label>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="{{this.answerFieldOneId}}">
+                            <label class="mr-sm-1" for="{{this.answerFieldTwoId}}">(2)</label>
+                            <input type="text" class="form-control mb-auto mr-sm-2" id="{{this.answerFieldTwoId}}">
+                        </form><br>
+                        <button class="btn btn-primary" data-action="submit">Submit</button>
                     </div>
                 </div>
             </div>

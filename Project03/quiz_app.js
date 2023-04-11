@@ -54,6 +54,7 @@ function handle_widget_event(e) {
         case "choice_3":
         case "choice_4": {
             select_choice(`#${e.target.id}`);
+            break;
         }
     }
 
@@ -69,7 +70,35 @@ function handle_widget_event(e) {
                 else {
                     alert("Please choose an option before submitting.");
                 }
+                break;
             }
+
+            case "#text_input_one": {
+                let answer = document.querySelector(`#${appState.current_model.answerFieldId}`).value;
+                if(answer != "") {
+                    check_answer(answer);
+                }
+                else {
+                    alert("Please enter an answer before submitting.");
+                }
+                break;
+            }
+
+            case "#text_input_multiple": {
+                let answerOne = document.querySelector(`#${appState.current_model.answerFieldOneId}`).value;
+                let answerTwo = document.querySelector(`#${appState.current_model.answerFieldTwoId}`).value;
+                
+                if(answerOne == "" || answerTwo == "") {
+                    alert("Please fill in both fields before submitting.");
+                }
+                else if(answerOne == answerTwo) {
+                    alert("Please submit two different answers in the text boxes.");
+                }
+                else {
+                    check_answers(answerOne, answerTwo);
+                }
+            }
+
         }
     }
 }
@@ -92,6 +121,29 @@ async function get_new_java_question() {
 
 function check_answer(answer) {
     if(answer == appState.current_model.correctAnswer) {
+        show_correct_view();
+        setTimeout(get_new_java_question, 1000);
+    }
+    else {
+        show_incorrect_view();
+    }
+}
+
+function check_answers(answerOne, answerTwo) {
+    let answerOneCorrect = false;
+    let answerTwoCorrect = false;
+    let correctAnswers = appState.current_model.correctAnswer;
+
+    for(let i = 0; i < correctAnswers.length; i++) {
+        if(correctAnswers[i] == answerOne) {
+            answerOneCorrect = true;
+        }
+        if(correctAnswers[i] == answerTwo) {
+            answerTwoCorrect = true;
+        }
+    }
+
+    if(answerOneCorrect && answerTwoCorrect) {
         show_correct_view();
         setTimeout(get_new_java_question, 1000);
     }

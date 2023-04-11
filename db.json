@@ -36,11 +36,11 @@
             "options": [
                 {
                     "id": "img_1",
-                    "source": "https://github.com/averylagredelle/CUS-1172/blob/main/Project03/Database/java_questions/prints_aaa.png"
+                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/prints_aaa.png"
                 }, 
                 {
                     "id": "img_2",
-                    "source": "https://github.com/averylagredelle/CUS-1172/blob/main/Project03/Database/java_questions/prints_aaaa.png"
+                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/prints_aaaa.png"
                 }
             ],
             "explanation": "In the first image, the loop iterates three times (i = 0, i = 1, i = 2). Once i = 3, the loop stops. In the second image, the loop continues until i > 3, so it executes four times (i = 0, i = 1, i = 2, i = 3)."
