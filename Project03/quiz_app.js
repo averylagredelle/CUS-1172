@@ -2,7 +2,15 @@ const appState = {
     current_view: "#intro_view",
     current_question: -1,
     current_model: {}
-}
+};
+
+const encouragingMessage = [
+    `<div class="container"><img class="center" width="500px" height="500px" src="https://thumbs.dreamstime.com/b/hand-drawn-lettering-word-brilliant-motivational-quote-hand-drawn-lettering-word-brilliant-167630836.jpg"></div>`,
+    `<div class="container"><img class="center" width="500px" height="500px" src="https://thumbs.dreamstime.com/b/word-amazing-comic-cloud-explosion-background-illustration-216308972.jpg"></div>`,
+    `<div class="container"><img class="center" width="500px" height="500px" src="https://media.istockphoto.com/id/1280293279/vector/great-job-word-isolated-with-stars-hand-calligraphy-lettering-as-logo-icon-tag-label.jpg?s=612x612&w=0&k=20&c=YceXShflBjne1q5bYA9b6wi-_CqXhq9TOv1JwddlFWI="></div>`
+];
+
+var choiceSelected = "";
 
 document.addEventListener("DOMContentLoaded", () => {
     appState.current_view = "#intro_view";
@@ -23,17 +31,45 @@ function update_view() {
 
 function handle_widget_event(e) {
     //console.log(e);
-    if(e.target.id == "java_quiz") {
-        if(document.querySelector("#user_name").value == "") {
-            alert("Please enter your name before selecting a quiz.");
+    switch(e.target.id) {
+        case "java_quiz": {
+            if(document.querySelector("#user_name").value == "") {
+                alert("Please enter your name before selecting a quiz.");
+            }
+            else {
+                get_new_java_question();
+            }
+            break;
         }
-        else {
-            get_new_java_question();
+
+        case "javascript_quiz": {
+            if(document.querySelector("#user_name").value == "") {
+                alert("Please enter your name before selecting a quiz.");
+            }
+            break;
+        }
+
+        case "choice_1":
+        case "choice_2":
+        case "choice_3":
+        case "choice_4": {
+            select_choice(`#${e.target.id}`);
         }
     }
-    else if(e.target.id == "javascript_quiz") {
-        if(document.querySelector("#user_name").value == "") {
-            alert("Please enter your name before selecting a quiz.");
+
+    if(e.target.dataset.action == "answer") {
+        check_answer(e.target.dataset.answer);
+    }
+    else if(e.target.dataset.action == "submit") {
+        switch(appState.current_view) {
+            case "#multiple_choice": {
+                if(choiceSelected != "") {
+                    check_answer(choiceSelected);
+                }
+                else {
+                    alert("Please choose an option before submitting.");
+                }
+            }
         }
     }
 }
@@ -46,7 +82,33 @@ async function get_new_java_question() {
     } catch(err) {
         console.log(err);
     }
-    appState.current_model = questionObj[appState.current_question];
-    appState.current_view = "#" + questionObj[appState.current_question].questionType;
-    update_view();
+
+    if(appState.current_question < questionObj.length) {
+        appState.current_model = questionObj[appState.current_question];
+        appState.current_view = "#" + questionObj[appState.current_question].questionType;
+        update_view();
+    }
+}
+
+function check_answer(answer) {
+    if(answer == appState.current_model.correctAnswer) {
+        show_correct_view();
+        setTimeout(get_new_java_question, 1000);
+    }
+    else {
+        show_incorrect_view();
+    }
+}
+
+function show_correct_view() {
+    document.querySelector("#widget_view").innerHTML = encouragingMessage[Math.floor(Math.random() * encouragingMessage.length)];
+}
+
+function show_incorrect_view() {}
+
+function select_choice(choice_id) {
+    choice = document.querySelector(choice_id);
+    choiceSelected = choice.value;
+    let new_html = `<input name="${choice.name}" type="radio" value='${choice.value}' id="${choice.id}" checked>`;
+    choice.outerHTML = new_html;
 }
