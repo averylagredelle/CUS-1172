@@ -27,11 +27,13 @@
     <script id="intro_view" type="text/x-handlebars-template">
         <div class="container text-center">
             <h2>Welcome to this Quiz App! Enter your name below, then choose which quiz you want to take.</h2>
+            <br>
             <form>
                 <div>
                     <label>Enter Your Name:</label>
                     <input type="text" placeholder="Name" id="user_name">
                 </div>
+                <br>
                 <div>
                     <button class="btn btn-primary" id="java_quiz">Take Java Quiz</button>
                     <button class="btn btn-info" id="javascript_quiz">Take Javascript Quiz</button>
@@ -40,21 +42,19 @@
         </div>
     </script>
 
-    <script id="question_view_true_false" type="text/x-handlebars-template">
+    <script id="true_false" type="text/x-handlebars-template">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div>
-                        <span style="text-align: center;">{{this.questionText}}</span>
-                        <button class="btn btn-primary pull-left" data-action="answer" data-answer="{{this.options.[0]}}">{{this.options.[0]}}</button>
-                        <button class="btn btn-primary float-right" data-action="answer" data-answer="{{this.options.[1]}}">{{this.options.[1]}}</button>
-                    </div>
-                </div>
-            </div>
+           <div>
+                <span style="text-align: center;">{{this.questionText}}</span>
+           </div>
+           <div>
+                <button class="btn btn-primary" data-action="answer" data-answer="{{this.options.[0]}}">{{this.options.[0]}}</button>
+                <button class="btn btn-primary" data-action="answer" data-answer="{{this.options.[1]}}">{{this.options.[1]}}</button>
+           </div>
         </div>
     </script>
 
-    <script id="question_view_multiple_choice" type="text/x-handlebars-template">
+    <script id="multiple_choice" type="text/x-handlebars-template">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -75,7 +75,7 @@
         </div>
     </script>
 
-    <script id="question_view_text_input_one" type="text/x-handlebars-template">
+    <script id="text_input_one" type="text/x-handlebars-template">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -89,7 +89,7 @@
         </div>
     </script>
 
-    <script id="question_view_text_input_multiple" type="text/x-handlebars-template">
+    <script id="text_input_multiple" type="text/x-handlebars-template">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -108,7 +108,7 @@
         </div>
     </script>
 
-    <script id="question_view_image_selection" type="text/x-handlebars-template">
+    <script id="image_selection" type="text/x-handlebars-template">
         <div class="container">
             <div class="row">
                 <div class="col">

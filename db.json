@@ -3,27 +3,31 @@
         {
             "questionType": "true_false",
             "questionText": "Java is an object-oriented programming language.",
-            "correctAnswer": "true",
-            "options": ["true", "false"]
+            "correctAnswer": "True",
+            "options": ["True", "False"],
+            "explanation": "Java is a general-purpose, class-based, object-oriented programming language."
         },
         {
             "questionType": "multiple_choice",
             "questionText": "Which statement would you use to print the string \"Hello\" in Java?",
             "correctAnswer": "System.out.println(\"Hello\")",
-            "options":["console.log(\"Hello\")", "Console.WriteLine(\"Hello\")", "System.out.println(\"Hello\")", "print('Hello')"] 
+            "options":["console.log(\"Hello\")", "Console.WriteLine(\"Hello\")", "System.out.println(\"Hello\")", "print('Hello')"],
+            "explanation": "To print a statement in Java, you use the System.out.println() method (though you can also use the System.out.print() method). The other methods are for printing statements in other programming languages." 
         },
         {
             "questionType": "text_input_one",
             "questionText": "What Java statement do you need to find the square root of 10.89?",
             "correctAnswer": "Math.sqrt(10.89)",
-            "answerFieldId": "answer_to_question"
+            "answerFieldId": "answer_to_question",
+            "explanation": "To find the square root of any double in Java, you can use the Math.sqrt() method."
         }, 
         {
             "questionType": "text_input_multiple",
             "questionText": "There are three types of loops you can use in Java. One is the do-while loop. What are the names of the other two kinds of loops?",
             "correctAnswer": ["for", "while"],
             "answerFieldOneId": "first_answer",
-            "answerFieldTwoId": "second_answer"
+            "answerFieldTwoId": "second_answer",
+            "explanation": "The other two kinds of loops are the for loop and the while loop."
         },
         {
             "questionType": "image_selection",
@@ -38,7 +42,8 @@
                     "id": "img_2",
                     "source": "https://github.com/averylagredelle/CUS-1172/blob/main/Project03/Database/java_questions/prints_aaaa.png"
                 }
-            ]
+            ],
+            "explanation": "In the first image, the loop iterates three times (i = 0, i = 1, i = 2). Once i = 3, the loop stops. In the second image, the loop continues until i > 3, so it executes four times (i = 0, i = 1, i = 2, i = 3)."
         }
     ],
 
