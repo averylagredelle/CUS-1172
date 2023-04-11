@@ -24,7 +24,21 @@
     </body>
 
     <!--Views-->
-    <script id="intro_view" type="text/x-handlebars-template"></script>
+    <script id="intro_view" type="text/x-handlebars-template">
+        <div class="container text-center">
+            <h2>Welcome to this Quiz App! Enter your name below, then choose which quiz you want to take.</h2>
+            <form>
+                <div>
+                    <label>Enter Your Name:</label>
+                    <input type="text" placeholder="Name" id="user_name">
+                </div>
+                <div>
+                    <button class="btn btn-primary" id="java_quiz">Take Java Quiz</button>
+                    <button class="btn btn-info" id="javascript_quiz">Take Javascript Quiz</button>
+                </div>
+            </form>
+        </div>
+    </script>
 
     <script id="question_view_true_false" type="text/x-handlebars-template">
         <div class="container">
@@ -99,8 +113,16 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        
+                        <span style="text-align: center;">{{this.questionText}}</span>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img id="{{this.options.[0].id}}" src="{{this.options.[0].source}}">
+                </div>
+                <div class="col-sm-6">
+                    <img id="{{this.options.[1].id}}" src="{{this.options.[1].source}}">
                 </div>
             </div>
         </div>

@@ -32,7 +32,11 @@
             "options": [
                 {
                     "id": "img_1",
-                    "source": ""
+                    "source": "https://github.com/averylagredelle/CUS-1172/blob/main/Project03/Database/java_questions/prints_aaa.png"
+                }, 
+                {
+                    "id": "img_2",
+                    "source": "https://github.com/averylagredelle/CUS-1172/blob/main/Project03/Database/java_questions/prints_aaaa.png"
                 }
             ]
         }
