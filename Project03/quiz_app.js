@@ -1,6 +1,7 @@
 const appState = {
     current_view: "#intro_view",
     current_question: -1,
+    current_question_total: 0,
     current_model: {}
 };
 
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function update_view() {
     let template_source = document.querySelector(appState.current_view).innerHTML;
     var template = Handlebars.compile(template_source);
-    var html_widget_element = template(appState.current_model);
+    var html_widget_element = template({...appState.current_model, ...appState});
     document.querySelector("#widget_view").innerHTML = html_widget_element;
 }
 
@@ -131,8 +132,8 @@ async function get_next_question() {
     } catch(err) {
         console.log(err);
     }
-
-    if(appState.current_question < questionObj.length) {
+    appState.current_question_total = questionObj.length;
+    if(appState.current_question < appState.current_question_total) {
         appState.current_model = questionObj[appState.current_question];
         appState.current_view = "#" + questionObj[appState.current_question].questionType;
         update_view();

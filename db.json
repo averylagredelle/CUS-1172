@@ -1,6 +1,7 @@
 {
     "java_questions": [
         {
+            "quizType": "Java Quiz",
             "questionType": "true_false",
             "questionText": "Java is an object-oriented programming language.",
             "correctAnswer": "True",
@@ -8,6 +9,7 @@
             "explanation": "Java is a general-purpose, class-based, object-oriented programming language."
         },
         {
+            "quizType": "Java Quiz",
             "questionType": "multiple_choice",
             "questionText": "Which statement would you use to print the string \"Hello\" in Java?",
             "correctAnswer": "System.out.println(\"Hello\")",
@@ -15,6 +17,7 @@
             "explanation": "To print a statement in Java, you use the System.out.println() method (though you can also use the System.out.print() method). The other methods are for printing statements in other programming languages." 
         },
         {
+            "quizType": "Java Quiz",
             "questionType": "text_input_one",
             "questionText": "What Java statement do you need to find the square root of 10.89?",
             "correctAnswer": "Math.sqrt(10.89)",
@@ -22,6 +25,7 @@
             "explanation": "To find the square root of any double in Java, you can use the Math.sqrt() method."
         }, 
         {
+            "quizType": "Java Quiz",
             "questionType": "text_input_multiple",
             "questionText": "There are three types of loops you can use in Java. One is the do-while loop. What are the names of the other two kinds of loops?",
             "correctAnswer": ["for", "while"],
@@ -30,6 +34,7 @@
             "explanation": "The other two kinds of loops are the for loop and the while loop."
         },
         {
+            "quizType": "Java Quiz",
             "questionType": "image_selection",
             "questionText": "Which code block will print \"aaa\"?",
             "correctAnswer": "img_1",
