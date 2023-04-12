@@ -1,6 +1,6 @@
 const appState = {
     current_view: "#intro_view",
-    current_question: -1,
+    current_question: 0,
     current_question_total: 0,
     current_model: {}
 };
@@ -133,11 +133,11 @@ async function get_next_question() {
         console.log(err);
     }
     appState.current_question_total = questionObj.length;
-    if(appState.current_question < appState.current_question_total) {
-        appState.current_model = questionObj[appState.current_question];
-        appState.current_view = "#" + questionObj[appState.current_question].questionType;
+    if(appState.current_question <= appState.current_question_total) {
+        appState.current_model = questionObj[appState.current_question - 1];
+        appState.current_view = "#" + questionObj[appState.current_question - 1].questionType;
         update_view();
-        if(appState.current_question == 0) {
+        if(appState.current_question == 1) {
             show_scoreboard();
         }
         else {
@@ -145,7 +145,7 @@ async function get_next_question() {
         }
     }
     else {
-        if(((score/appState.current_question) * 100) >= 80) {
+        if(((score/(appState.current_question - 1)) * 100) >= 80) {
             show_end_screen(true);
         }
         else {
@@ -189,8 +189,8 @@ function update_scoreboard() {
     let scoreCount = document.querySelector("#score");
     let questionsAnswered = document.querySelector("#questions_answered");
 
-    scoreCount.innerHTML = Math.floor((score/appState.current_question) * 100);
-    questionsAnswered.innerHTML = appState.current_question;
+    scoreCount.innerHTML = Math.floor((score/(appState.current_question - 1)) * 100);
+    questionsAnswered.innerHTML = appState.current_question - 1;
 }
 
 function hide_scoreboard() {
@@ -288,7 +288,7 @@ function show_end_screen(passed) {
 
 function reset_view() {
     appState.current_model = {};
-    appState.current_question = -1;
+    appState.current_question = 0;
     appState.current_view = "#intro_view";
     score = 0;
     hide_scoreboard();
@@ -296,7 +296,7 @@ function reset_view() {
 }
 
 function reset_quiz() {
-    appState.current_question = -1;
+    appState.current_question = 0;
     score = 0;
     hide_scoreboard();
     get_next_question();
