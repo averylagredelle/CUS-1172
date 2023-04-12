@@ -1,7 +1,7 @@
 const appState = {
     current_view: "#intro_view",
     current_question: 0,
-    current_question_total: 0,
+    current_quiz: "",
     current_model: {}
 };
 
@@ -42,6 +42,7 @@ function handle_widget_event(e) {
             }
             else {
                 userName = document.querySelector("#user_name").value;
+                appState.current_quiz = "java_quiz";
                 get_next_question();
             }
             break;
