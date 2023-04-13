@@ -141,7 +141,7 @@ async function get_next_question() {
         }
     } 
     catch(err) {
-        //console.log(err);
+        console.log(err);
         if(((score/(appState.current_question - 1)) * 100) >= 80) {
             show_end_screen(true);
         }
