@@ -1,6 +1,7 @@
 {
     "java_questions": [
         {
+            "id": "java_quiz_question1",
             "quizType": "Java Quiz",
             "questionType": "true_false",
             "questionText": "Java is an object-oriented programming language.",
@@ -9,6 +10,7 @@
             "explanation": "Java is a general-purpose, class-based, object-oriented programming language."
         },
         {
+            "id": "java_quiz_question2",
             "quizType": "Java Quiz",
             "questionType": "multiple_choice",
             "questionText": "Which statement would you use to print the string \"Hello\" in Java?",
@@ -17,6 +19,7 @@
             "explanation": "To print a statement in Java, you use the System.out.println() method (though you can also use the System.out.print() method). The other methods are for printing statements in other programming languages." 
         },
         {
+            "id": "java_quiz_question3",
             "quizType": "Java Quiz",
             "questionType": "text_input_one",
             "questionText": "What Java statement do you need to find the square root of 10.89?",
@@ -25,6 +28,7 @@
             "explanation": "To find the square root of any double in Java, you can use the Math.sqrt() method."
         }, 
         {
+            "id": "java_quiz_question4",
             "quizType": "Java Quiz",
             "questionType": "text_input_multiple",
             "questionText": "There are three types of loops you can use in Java. One is the do-while loop. What are the names of the other two kinds of loops?",
@@ -34,6 +38,7 @@
             "explanation": "The other two kinds of loops are the for loop and the while loop."
         },
         {
+            "id": "java_quiz_question5",
             "quizType": "Java Quiz",
             "questionType": "image_selection",
             "questionText": "Which code block will print \"aaa\"? Click the image showing the correct code block below.",
@@ -51,6 +56,7 @@
             "explanation": "In the first image, the loop iterates three times (i = 0, i = 1, i = 2). Once i = 3, the loop stops. In the second image, the loop continues until i > 3, so it executes four times (i = 0, i = 1, i = 2, i = 3)."
         },
         {
+            "id": "java_quiz_question6",
             "quizType":"Java Quiz",
             "questionType":"multiple_choice",
             "questionText": "What would be the correct syntax for creating an object of the Ball class named basketball?",
@@ -59,6 +65,7 @@
             "explanation": "To create an instance of a class in Java, the correct syntax is: ClassName name = new ClassName();. In this case, since the name of the object is \"basketball\" and the name of the class is \"Ball\" the correct syntax is Ball basketball = new Ball();"
         },
         {
+            "id": "java_quiz_question7",
             "quizType": "Java Quiz",
             "questionType": "true_false",
             "questionText": "An overridden methods are methods with the same name that take different parameters.",
@@ -67,6 +74,7 @@
             "explanation": "Methods that have the same name but take different parameters are called overloaded methods. Overridden methods are methods inherited from a superclass with different functionality than in the superclass."
         },
         {
+            "id": "java_quiz_question8",
             "quizType": "Java Quiz",
             "questionType": "text_input_one",
             "questionText": "Write the import statement needed to use ArrayLists in Java. Be sure to end with a semicolon.",
@@ -75,6 +83,7 @@
             "explanation": "In order to use ArrayLists in Java, you need to import them from the java.util package. The syntax is as follows:\n\nimport java.util.ArrayList;"
         },
         {
+            "id": "java_quiz_question9",
             "quizType": "Java Quiz",
             "questionType": "text_input_multiple",
             "questionText": "What are the two most common primitive types used in Java to store numbers?",
@@ -84,6 +93,7 @@
             "explanation": "The two types of methods in Java are void type methods and return type methods."
         },
         {
+            "id": "java_quiz_question10",
             "quizType": "Java Quiz",
             "questionType": "image_selection",
             "questionText": "Click the image below showing the code block that uses a for-each loop.",
