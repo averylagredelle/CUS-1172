@@ -68,7 +68,7 @@
             "id": "java_quiz_question7",
             "quizType": "Java Quiz",
             "questionType": "true_false",
-            "questionText": "An overridden methods are methods with the same name that take different parameters.",
+            "questionText": "Overridden methods are methods with the same name that take different parameters.",
             "correctAnswer": "False",
             "options": ["True", "False"],
             "explanation": "Methods that have the same name but take different parameters are called overloaded methods. Overridden methods are methods inherited from a superclass with different functionality than in the superclass."
@@ -90,7 +90,7 @@
             "correctAnswer": ["int", "double"],
             "answerFieldOneId": "first_answer",
             "answerFieldTwoId": "second_answer",
-            "explanation": "The two types of methods in Java are void type methods and return type methods."
+            "explanation": "Java has many primitive types for storing numbers, such as float, long, and byte. The most common types used, though, are int and double."
         },
         {
             "id": "java_quiz_question10",
