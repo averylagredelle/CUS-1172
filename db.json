@@ -86,17 +86,17 @@
         "quizType": "Java Quiz",
         "questionType": "image_selection",
         "questionText": "Click the image below showing the code block that uses a for-each loop.",
-        "correctAnswer": "img_1",
+        "correctAnswer": "img_2",
         "options": [
             {
                 "id": "img_1",
-                "source": ""
+                "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/doesnt_use_foreach_loop.png"
             }, 
             {
                 "id": "img_2",
-                "source": ""
+                "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/uses_foreach_loop.png"
             }
         ],
-        "explanation": ""
+        "explanation": "The code block in the first image depicts a standard for loop. The code block in the second image shows a for-each loop, which has slightly different syntax"
     }
 }
