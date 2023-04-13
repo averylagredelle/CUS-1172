@@ -239,9 +239,18 @@ function show_incorrect_view() {
     document.querySelector("#widget_view").innerHTML = html_widget_element;
 
     let right_answer = document.querySelector("#right_answer");
+    right_answer.innerHTML = ``;
     switch(appState.current_model.questionType) {
         case "text_input_multiple": {
-            right_answer.innerHTML = `${appState.current_model.correctAnswer[0]} and ${appState.current_model.correctAnswer[1]}`;
+            if(appState.current_model.correctAnswer.length == 2) {
+                right_answer.innerHTML = `${appState.current_model.correctAnswer[0]} and ${appState.current_model.correctAnswer[1]}`;
+            }
+            else if(appState.current_model.correctAnswer.length > 2) {
+                for(let i = 0; i <= appState.current_model.correctAnswer.length - 2; i++) {
+                    right_answer.innerHTML += `${appState.current_model.correctAnswer[i]}, `;
+                }
+                right_answer.innerHTML += `or ${appState.current_model.correctAnswer[appState.current_model.correctAnswer.length - 1]}`;
+            }
             break;
         }
 
