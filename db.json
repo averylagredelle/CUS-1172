@@ -108,7 +108,52 @@
                     "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/uses_foreach_loop.png"
                 }
             ],
-            "explanation": "The code block in the first image depicts a standard for loop. The code block in the second image shows a for-each loop, which has slightly different syntax"
+            "explanation": "The code block in the first image depicts a standard for loop. The code block in the second image shows a for-each loop, which has slightly different syntax."
+        },
+        {
+            "id": "java_quiz_question11",
+            "quizType":"Java Quiz",
+            "questionType":"multiple_choice",
+            "questionText": "Which of the following is not a primitive type in Java?",
+            "correctAnswer": "String",
+            "options": ["char", "String", "boolean", "short"],
+            "explanation": "Even though you can declare a String variable in Java with similar syntax to declaring variables of primitive types, String is a class in Java and therefore not a primitive type."
+        },
+        {
+            "id": "java_quiz_question12",
+            "quizType": "Java Quiz",
+            "questionType": "text_input_one",
+            "questionText": "If your method does not return a value, it needs to have the ______ keyword in its method signature.",
+            "correctAnswer": "void",
+            "answerFieldId": "answer_to_question",
+            "explanation": "In Java, you have to have a return type in your method signature. If your method returns a value, the return type will be the type that the method returns. If your method doesn't return a value, the return type will be \"void\"."
+        },
+        {
+            "id": "java_quiz_question13",
+            "quizType": "Java Quiz",
+            "questionType": "true_false",
+            "questionText": "To find the value of 2^3 you can use the method Math.power(2, 3).",
+            "correctAnswer": "False",
+            "options": ["True", "False"],
+            "explanation": "The method for calculating the value of a number raised to a certain power is Math.pow(). To find 2^3, you would use Math.pow(2, 3)."
+        },
+        {
+            "id": "java_quiz_question14",
+            "quizType": "Java Quiz",
+            "questionType": "image_selection",
+            "questionText": "Which code block shown below will throw a compiler error when run? (Click the image that correctly answers the question.)",
+            "correctAnswer": "img_1",
+            "options": [
+                {
+                    "id": "img_1",
+                    "source": ""
+                }, 
+                {
+                    "id": "img_2",
+                    "source": ""
+                }
+            ],
+            "explanation": ""
         }
     ]
 }
