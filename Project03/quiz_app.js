@@ -128,15 +128,10 @@ function handle_widget_event(e) {
 async function get_next_question() {
     appState.current_question += 1;
     try{
-        let question = await fetch("https://my-json-server.typicode.com/averylagredelle/CUS-1172/java_questions");
-        questionObj = await question.json();
-    } catch(err) {
-        console.log(err);
-    }
-    appState.current_question_total = questionObj.length;
-    if(appState.current_question <= appState.current_question_total) {
-        appState.current_model = questionObj[appState.current_question - 1];
-        appState.current_view = "#" + questionObj[appState.current_question - 1].questionType;
+        let question = await fetch(`https://my-json-server.typicode.com/averylagredelle/CUS-1172/${appState.current_quiz}_question${appState.current_question}`);
+        let questionObj = await question.json();
+        appState.current_model = questionObj;
+        appState.current_view = "#" + appState.current_model.questionType;
         update_view();
         if(appState.current_question == 1) {
             show_scoreboard();
@@ -144,8 +139,9 @@ async function get_next_question() {
         else {
             update_scoreboard();
         }
-    }
-    else {
+    } 
+    catch(err) {
+        //console.log(err);
         if(((score/(appState.current_question - 1)) * 100) >= 80) {
             show_end_screen(true);
         }
