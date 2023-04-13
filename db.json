@@ -164,6 +164,42 @@
             "answerFieldOneId": "first_answer",
             "answerFieldTwoId": "second_answer",
             "explanation": "The four access modifiers in Java are public, private, protected, and default."
+        },
+        {
+            "id": "java_quiz_question16",
+            "quizType":"Java Quiz",
+            "questionType":"multiple_choice",
+            "questionText": "Which of the following Java statements allows you to test code and handle any exceptions that may be thrown?",
+            "correctAnswer": "try catch",
+            "options": ["try catch", "if else", "switch case", "do while"],
+            "explanation": "In Java, you use a try catch statement to handle any code you think may throw an error. First you define the potentially error-throwing code in the try statement, then in the catch statement you define the code that will execute if an error is thrown."
+        },
+        {
+            "id": "java_quiz_question17",
+            "quizType": "Java Quiz",
+            "questionType": "text_input_one",
+            "questionText": "In order to declare a constant in Java, you have to use the _______ keyword.",
+            "correctAnswer": "final",
+            "answerFieldId": "answer_to_question",
+            "explanation": "A constant is a variable whose value doesn't change over the course of a program's runtime. To declare a constant, you have to use the keyword final. For example: final float PI = 3.141592654."
+        },
+        {
+            "id": "java_quiz_question18",
+            "quizType": "Java Quiz",
+            "questionType": "image_selection",
+            "questionText": "Select the image below that displays the code block that will print the quotient of 5 divided by 10 as a double.",
+            "correctAnswer": "img_2",
+            "options": [
+                {
+                    "id": "img_1",
+                    "source": ""
+                }, 
+                {
+                    "id": "img_2",
+                    "source": ""
+                }
+            ],
+            "explanation": "The code in the first image will print the remainder of 5 divided by 10 as a double, which is 5.0. The second image will print the quotient, which is 0.5."
         }
     ]
 }
