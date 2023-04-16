@@ -2,6 +2,7 @@ const appState = {
     current_view: "#intro_view",
     current_question: 0,
     current_quiz: "",
+    current_quiz_repo: "",
     current_model: {}
 };
 
@@ -43,6 +44,7 @@ function handle_widget_event(e) {
             else {
                 userName = document.querySelector("#user_name").value;
                 appState.current_quiz = "java_quiz";
+                appState.current_quiz_repo = "CUS-1172";
                 get_next_question();
             }
             break;
@@ -51,6 +53,12 @@ function handle_widget_event(e) {
         case "javascript_quiz": {
             if(document.querySelector("#user_name").value == "") {
                 alert("Please enter your name before selecting a quiz.");
+            }
+            else {
+                userName = document.querySelector("#user_name").value;
+                appState.current_quiz = "javascript_quiz";
+                appState.current_quiz_repo = "Project-3";
+                get_next_question();
             }
             break;
         }
@@ -128,7 +136,7 @@ function handle_widget_event(e) {
 async function get_next_question() {
     appState.current_question += 1;
     try{
-        let question = await fetch(`https://my-json-server.typicode.com/averylagredelle/CUS-1172/${appState.current_quiz}?id=${appState.current_quiz}_question${appState.current_question}`);
+        let question = await fetch(`https://my-json-server.typicode.com/averylagredelle/${appState.current_quiz_repo}/${appState.current_quiz}?id=${appState.current_quiz}_question${appState.current_question}`);
         let questionObj = await question.json();
         appState.current_model = questionObj[0];
         appState.current_view = "#" + appState.current_model.questionType;
