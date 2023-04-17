@@ -46,11 +46,11 @@
             "options": [
                 {
                     "id": "img_1",
-                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/prints_aaa.png"
+                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Assignment03/Database/java_questions/prints_aaa.png"
                 }, 
                 {
                     "id": "img_2",
-                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/prints_aaaa.png"
+                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Assignment03/Database/java_questions/prints_aaaa.png"
                 }
             ],
             "explanation": "In the first image, the loop iterates three times (i = 0, i = 1, i = 2). Once i = 3, the loop stops. In the second image, the loop continues until i > 3, so it executes four times (i = 0, i = 1, i = 2, i = 3)."
@@ -101,11 +101,11 @@
             "options": [
                 {
                     "id": "img_1",
-                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/doesnt_use_foreach_loop.png"
+                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Assignment03/Database/java_questions/doesnt_use_foreach_loop.png"
                 }, 
                 {
                     "id": "img_2",
-                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/uses_foreach_loop.png"
+                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Assignment03/Database/java_questions/uses_foreach_loop.png"
                 }
             ],
             "explanation": "The code block in the first image depicts a standard for loop. The code block in the second image shows a for-each loop, which has slightly different syntax."
@@ -146,11 +146,11 @@
             "options": [
                 {
                     "id": "img_1",
-                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/throws_compiler_error.png"
+                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Assignment03/Database/java_questions/throws_compiler_error.png"
                 }, 
                 {
                     "id": "img_2",
-                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Project03/Database/java_questions/throws_runtime_error.png"
+                    "source": "https://raw.githubusercontent.com/averylagredelle/CUS-1172/main/Assignment03/Database/java_questions/throws_runtime_error.png"
                 }
             ],
             "explanation": "The second image throws a StringIndexOutOfBoundsException, which is a runtime error. The first image is missing a semi-colon at the end of one of its statements, which means the compiler won't be able to compile the code and will throw a compiler error."
