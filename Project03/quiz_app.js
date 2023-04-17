@@ -171,8 +171,15 @@ function show_scoreboard() {
 
     timer = setInterval(function() {
         var delta = Date.now() - start;
+        let hours = 0;
+        let hoursTime = "0";
         let minutes = 0;
+        let minutesTime = "00";
         let seconds = 0;
+        let secondsTime = "00";
+        if(delta >= 3600000) {
+            hours = Math.floor(delta/3600000);
+        }
         if(delta >= 60000) {
             minutes = Math.floor(delta/60000);
         }
@@ -180,12 +187,21 @@ function show_scoreboard() {
             seconds = Math.floor(delta/1000);
         }
         seconds = seconds - (minutes * 60);
+        minutes = minutes - (hours * 60);
         if(seconds < 10) {
-            time_elapsed.innerHTML = `${minutes}:0${seconds}`;
+            secondsTime = `0${seconds}`;
         }
         else {
-            time_elapsed.innerHTML = `${minutes}:${seconds}`;
+            secondsTime = `${seconds}`;
         }
+        if(minutes < 10) {
+            minutesTime = `0${minutes}`;
+        }
+        else {
+            minutesTime = `${minutes}`;
+        }
+        hoursTime = `${hours}`;
+        time_elapsed.innerHTML = `${hoursTime}:${minutesTime}:${secondsTime}`;
     }, 100);
 
 }
@@ -211,6 +227,7 @@ function check_answer(answer) {
     else {
         show_incorrect_view();
     }
+    choiceSelected = "";
 }
 
 function check_answers(answerOne, answerTwo) {
