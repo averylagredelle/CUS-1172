@@ -35,7 +35,6 @@ function update_view() {
 }
 
 function handle_widget_event(e) {
-    //console.log(e);
     switch(e.target.id) {
         case "java_quiz": {
             if(document.querySelector("#user_name").value == "") {
@@ -149,7 +148,6 @@ async function get_next_question() {
         }
     } 
     catch(err) {
-        //console.log(err);
         if(((score/(appState.current_question - 1)) * 100) >= 80) {
             show_end_screen(true);
         }
